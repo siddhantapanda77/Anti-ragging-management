@@ -21,9 +21,9 @@ function App() {
         <div className="App">
           <NavBar />
           <Switch>
-            <Route exact path='/addComplaints' component={NewComplaint}/>
-            <Route exact path='/complaints' component={ComplaintsList}/>
-            <Route exact path='/allComplaints' component={AllComplaints}/>
+            <Route  path='/addComplaints' component={NewComplaint}/>
+            <Route path='/complaints' component={ComplaintsList}/>
+            <Route path='/allComplaints' component={AllComplaints}/>
             <Route exact path='/' component={SignIn} />            
             
             <Route path='/profile' component={StudentDetails}/>         
