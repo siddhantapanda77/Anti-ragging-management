@@ -1,5 +1,6 @@
 import axios from 'axios'
 import jwtDecode from 'jwt-decode'
+import {setAuthorizationToken} from '../../utils/auth'
 
 export function setCurrentUser(user){
     console.log("user");
@@ -26,6 +27,7 @@ export function  login(data) {
                 console.log(res.data.data.token)
                 const token = res.data.data.token;
                 console.log(token);
+                setAuthorizationToken(token);
                 localStorage.setItem('jwtToken', token);
                 dispatch(setCurrentUser(jwtDecode(token)));
             }
