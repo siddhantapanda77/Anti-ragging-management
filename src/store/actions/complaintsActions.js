@@ -8,7 +8,7 @@ export const getComplaint = () => {
             type: 'GET_COMPLAINT_SUCCESS',
             payload: res.data.data.reverse()
         })).catch(err => {
-            window.location.reload();
+            //window.location.reload();
             dispatch({
             type: 'GET_COMPLAINT_ERROR',
             err
@@ -24,7 +24,7 @@ export const getAllComplaints = () => {
             payload: res.data.data.reverse()
         })).catch(err =>
             {
-                window.location.reload();
+                //window.location.reload();
                 dispatch({
                     type: 'GET_ALLCOMPLAINT_ERROR',
                     err
