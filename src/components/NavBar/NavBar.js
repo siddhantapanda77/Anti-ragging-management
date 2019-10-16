@@ -10,7 +10,7 @@ class NavBar extends Component {
      const links = (this.props.auth.isAuthenticated)?<li><SignedInLinks/></li>:<li><SignedOutLinks/></li> 
       return(
         <div>  
-            <nav className="indigo">
+            <nav className="deep-purple darken-4">
               <div className="nav-wrapper">
                 <a href="#!" className="brand-logo">ATMS</a>
                 <ul className="right hide-on-med-and-down">
