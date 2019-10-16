@@ -2,8 +2,7 @@ import React,{ Component } from 'react'
 import {connect} from 'react-redux'
 import SignedInLinks from './SignedInLinks'
 import SignedOutLinks from './SignedOutLinks'
-
-
+import { SideNav, SideNavItem, Button, Icon} from 'react-materialize'
 
 class NavBar extends Component {
     render(){
@@ -11,6 +10,14 @@ class NavBar extends Component {
       return(
         <div>  
             <nav className="deep-purple darken-4">
+              {(this.props.auth.isAuthenticated)?<div className="show-on-medium-and-down">
+                  
+                  <SideNav trigger={<Button flat ><Icon className="white-text">dehaze</Icon></Button>} options={{closeOnClick: true}}>
+                  <SideNavItem>
+                  {links}
+                  </SideNavItem>
+                  </SideNav>
+                  </div>:null}
               <div className="nav-wrapper">
                 <a href="#!" className="brand-logo" style={{left: '65px'}}>ATMS</a>
                 <ul className="right hide-on-med-and-down">
