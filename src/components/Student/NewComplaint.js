@@ -49,7 +49,7 @@ class NewComplaint extends Component {
                  </div>                        
                         <div className="row">
                           <div className="input-field ">
-                          <i className="material-icons prefix">mode_edit</i>
+                          <i className="black-text material-icons prefix">mode_edit</i>
                             <textarea 
                             id="description"
                             name="description"
