@@ -12,7 +12,7 @@ class NavBar extends Component {
         <div>  
             <nav className="deep-purple darken-4">
               <div className="nav-wrapper">
-                <a href="#!" className="brand-logo">ATMS</a>
+                <a href="#!" className="brand-logo" style={{left: '10px'}}>ATMS</a>
                 <ul className="right hide-on-med-and-down">
                   {links}
                 </ul>
