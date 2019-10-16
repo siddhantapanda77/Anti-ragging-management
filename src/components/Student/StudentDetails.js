@@ -63,7 +63,7 @@ class StudentDetails extends Component{
         console.log(student )
         if(Array.isArray(student))
         {return(
-            <div className='container row white-text' style={{marginTop: '2%'}}>
+            <div className='container row' style={{marginTop: '2%'}}>
                 <img className='col s12 m6 l6'src={student[0].profile_pic} style={{borderRadius: '7%',  
                                                           width: '44%',
                                                           marginTop: '4%'}}/>
@@ -84,7 +84,7 @@ class StudentDetails extends Component{
                     <i class="material-icons right">edit</i></button>
           }>
               <div>
-              <form className="white containe" onSubmit={this.handleSubmit}>
+              <form className="container" onSubmit={this.handleSubmit}>
               <TextInput label="name" id="name" value={this.state.name} onChange={this.handleChange}/>
               <TextInput label="profile_pic" id="profile_pic" value={this.state.profile_pic} onChange={this.handleChange}/>
               <TextInput label="gender" id="gender" value={this.state.gender} onChange={this.handleChange}/>
