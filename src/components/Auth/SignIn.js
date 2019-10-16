@@ -40,10 +40,10 @@ class SignIn extends Component{
        
     return ( 
             <div  style={{width: 'fit-content',margin: "10% auto"}}>
-            <div className="card indigo lighten-2" >
-              <div className="card-content blue lighten-2">
+            <div className="card blue-grey lighten-5" >
+              <div className="card-content blue-grey lighten-5">
                 <div className="card-title">Sign In</div>
-            <form className=" blue lighten-2 black-text" onSubmit={this.handleSubmit}>
+            <form className=" blue-grey lighten-5 black-text" onSubmit={this.handleSubmit}>
               <div className="input-field">
                 <label className="black-text" htmlFor="email">Email</label>
                 <input className="black-text" type="email" id='email' onChange={this.handleChange} />
