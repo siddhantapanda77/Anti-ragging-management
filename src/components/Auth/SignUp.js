@@ -26,7 +26,7 @@ class SignUp extends Component{
 
     render() {
         return (            
-            <div style={{width: '30%',margin: "10% auto"}}>
+            <div style={{width: 'fit-content',margin: "10% auto"}}>
               <div className="card blue lighten-2" >
               <div className="card-content ">
             <form className="black-text blue lighten-2" onSubmit={this.handleSubmit}>
