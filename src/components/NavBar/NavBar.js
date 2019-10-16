@@ -10,7 +10,7 @@ class NavBar extends Component {
       return(
         <div>  
             <nav className="deep-purple darken-4">
-              {(this.props.auth.isAuthenticated)?<div className="show-on-medium-and-down">
+              {(this.props.auth.isAuthenticated)?<div className="right show-on-medium-and-down">
                   
                   <SideNav trigger={<Button flat ><Icon className="white-text">dehaze</Icon></Button>} options={{closeOnClick: true}}>
                   <SideNavItem>
@@ -19,8 +19,8 @@ class NavBar extends Component {
                   </SideNav>
                   </div>:null}
               <div className="nav-wrapper">
-                <a href="#!" className={!(this.props.auth.isAuthenticated)?"right":"right hide-on-med-and-down"} style={{left: '65px'}}>ATMS</a>
-                <ul className="right hide-on-med-and-down">
+                <a href="#!" style={{left: '65px'}}>ATMS</a>
+                <ul className={!(this.props.auth.isAuthenticated)?"right":"right hide-on-med-and-down"}>
                   {links}
                 </ul>
               </div>
