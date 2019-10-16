@@ -27,7 +27,7 @@ class AllUsers extends Component {
                       <div className="card-content">
                       <img src={user.profile_pic} alt="volunteer name" style={{borderRadius: '68%',  
                                                           width: '37%', 
-                                                          border: '2px solid lightpink'}}/>
+                                                          border: '2px solid blue'}}/>
                       <ul>
                         <li>{user.name}</li>
                         <li>{user.email}</li>
@@ -41,7 +41,7 @@ class AllUsers extends Component {
               <div className='post' style={{marginTop: '2%'}}>
                 <img src={user.profile_pic} alt="user.name" style={{borderRadius: '68%',  
                                                           width: '28%', 
-                                                          border: '2px solid lightpink'}}/>
+                                                          border: '2px solid blue'}}/>
                 
                 <h4 className='right'>
                     Name:{user.name}
