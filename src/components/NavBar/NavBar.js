@@ -19,7 +19,7 @@ class NavBar extends Component {
                   </SideNav>
                   </div>:null}
               <div className="nav-wrapper">
-                <a href="#!" style={{left: '65px'}}>ATMS</a>
+                <a href="#!" class="brand-logo" style={{left: '65px'}}>ATMS</a>
                 <ul className={!(this.props.auth.isAuthenticated)?"right":"right hide-on-med-and-down"}>
                   {links}
                 </ul>
