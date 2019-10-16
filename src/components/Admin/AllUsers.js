@@ -22,7 +22,7 @@ class AllUsers extends Component {
                 
                 {
                   
-                    users.map(user => <div className="container col s2  m3 l4" key={user.clg_id} >
+                    users.map(user => <div className="container col s12  m3 l4" key={user.clg_id} >
                       <div className= "card">
                       <div className="card-content">
                       <img src={user.profile_pic} alt="volunteer name" style={{borderRadius: '68%',  
