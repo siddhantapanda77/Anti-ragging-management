@@ -27,7 +27,7 @@ class AllAdmins extends Component {
                       <div className="card-content">
                       <img src={admin.profile_pic} alt="volunteer name" style={{borderRadius: '68%',  
                                                           width: '37%', 
-                                                          border: '2px solid lightpink'}}/>
+                                                          border: '2px solid blue'}}/>
                       <ul>
                         <li>{admin.name}</li>
                         <li>{admin.email}</li>
