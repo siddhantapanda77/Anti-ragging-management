@@ -38,7 +38,7 @@ class AllVolunteers extends Component {
                       <div className="card-content">
                       <img src={volunteer.profile_pic} style={{borderRadius: '68%',  
                                                           width: '37%', 
-                                                          border: '2px solid lightpink'}}/>
+                                                          border: '2px solid blue'}}/>
                       <ul>
                         <li>{volunteer.name}</li>
                         <li>{volunteer.email}</li>
@@ -52,7 +52,7 @@ class AllVolunteers extends Component {
               <div className='post' style={{marginTop: '2%'}}>
                 <img src={volunteer.profile_pic} alt="volunteer name" style={{borderRadius: '68%',  
                                                           width: '28%', 
-                                                          border: '2px solid lightpink'}}/>
+                                                          border: '2px solid blue'}}/>
                 
                 <h4>
                     Name:{volunteer.name}
