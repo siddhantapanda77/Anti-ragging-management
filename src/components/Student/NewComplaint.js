@@ -32,7 +32,7 @@ class NewComplaint extends Component {
       }
         return (
         <div>
-        <h2 className="center-align white-text">Complain Form</h2>
+        <h2 className="center-align">Complain Form</h2>
               <div>
                 <div className="container white-text">
               
