@@ -45,7 +45,7 @@ class AllComplaints extends Component{
                             {/* Resolve complaint */}
                     {/* </button>:null)}</Link> */}
                     <p className="truncate">{complain.description}</p>
-                    <h5 >Submitted by: {victim.name}(ID: {victim.clg_id})</h5>
+                    <p style={{fontWeight: 'bolder'}} >Submitted by: {victim.name}(ID: {victim.clg_id})</p>
                     <p className="indigo-text" >DATE : {moment.utc(complain.timestamp).format("MMMM Do YYYY, h:mm:ss a")}</p>
                     {((complain.status==='pending')?<button className="right btn red" onClick={()=>this.props.resolveComplaints(complain.comp_id)}>
                   Resolve</button>:null)}
