@@ -12,6 +12,7 @@ class SignIn extends Component{
       password: ''
     }
     this.handleChange=this.handleChange.bind(this);
+    this.handleSubmit=this.handleSubmit.bind(this);
 
   }
   handleChange =(e)=>{
@@ -38,7 +39,7 @@ class SignIn extends Component{
 } 
        
     return ( 
-            <div  style={{width: '30%',margin: "10% auto"}}>
+            <div  style={{width: 'fit-content',margin: "10% auto"}}>
             <div className="card indigo lighten-2" >
               <div className="card-content blue lighten-2">
                 <div className="card-title">Sign In</div>
