@@ -35,7 +35,7 @@ class AddVorS extends Component{
         return(<Redirect to='/'/>)
       }
         return (            
-          <div  style={{width: '30%',margin: "10% auto"}}>
+          <div  style={{width: 'fit-content',margin: "8% auto"}}>
           <div className="card indigo lighten-4" >
           <div className="card-content">
             <form className="black-text" onSubmit={this.handleSubmit}>
