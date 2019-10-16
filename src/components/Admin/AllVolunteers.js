@@ -33,7 +33,7 @@ class AllVolunteers extends Component {
                 
                 {
                   
-                    volunteers.map(volunteer => <div className="container col s2  m3 l4" key={volunteer.clg_id} >
+                    volunteers.map(volunteer => <div className="container col s12  m3 l4" key={volunteer.clg_id} >
                       <div className= "card">
                       <div className="card-content">
                       <img src={volunteer.profile_pic} style={{borderRadius: '68%',  
