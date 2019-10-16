@@ -28,11 +28,11 @@ class SignUp extends Component{
     render() {
         return (            
             <div style={{width: 'fit-content',margin: "10% auto"}}>
-              <div className="card blue lighten-2" >
+              <div className="card blue-grey lighten-5" >
               <div className="card-content ">
-            <form className="black-text blue lighten-2" onSubmit={this.handleSubmit}>
+            <form className="black-text blue-grey lighten-5" onSubmit={this.handleSubmit}>
               <h5 className="grey-text text-darken-3">Sign Up</h5>
-              <div className="input-field blue lighten-2">
+              <div className="input-field blue-grey lighten-5">
                 <label className="black-text" htmlFor="email">Email</label>
                 <input type="email" id='email' onChange={this.handleChange} />
               </div>
