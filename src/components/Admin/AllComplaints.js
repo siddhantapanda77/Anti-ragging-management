@@ -39,8 +39,7 @@ class AllComplaints extends Component{
               <div key={complain.comp_id}>
               <div className=" card  blue-grey lighten-5" >
                   <div className="card-content">
-                  {((complain.status==='pending')?<button className="right btn red" onClick={()=>this.props.resolveComplaints(complain.comp_id)}>
-                  Resolve</button>:null)}
+                      <p className={'right '+((complain.status==='pending') ? "red-text":"green-text")}>STATUS : {complain.status}</p>
                       <h3 className="card-title blue-text">{complain.title}</h3>
                     {/* <Link to={'/complaints/' + post.id}>{((post.status==='Unsolved')?<button className="left btn blue" onClick={this.handleClick}> */}
                             {/* Resolve complaint */}
@@ -48,7 +47,8 @@ class AllComplaints extends Component{
                     <p className="truncate">{complain.description}</p>
                     <h5 >Submitted by: {victim.name}(ID: {victim.clg_id})</h5>
                     <p className="indigo-text" >DATE : {moment.utc(complain.timestamp).format("MMMM Do YYYY, h:mm:ss a")}</p>
-                    <p className={'right '+((complain.status==='pending') ? "red-text":"green-text")}>STATUS : {complain.status}</p>
+                    {((complain.status==='pending')?<button className="right btn red" onClick={()=>this.props.resolveComplaints(complain.comp_id)}>
+                  Resolve</button>:null)}
                     <div style={{marginBottom:"5%"}}></div>
                     <div>
               <Modal header="Details" key={complain.comp_id} trigger={<button className="left btn blue" style={{marginTop:"-5%"}}>
