@@ -37,7 +37,7 @@ class AllComplaints extends Component{
             // console.log( victim);
             return (
               <div key={complain.comp_id}>
-              <div className=" card indigo lighten-4" >
+              <div className=" card  blue-grey lighten-5" >
                   <div className="card-content">
                   {((complain.status==='pending')?<button className="right btn red" onClick={()=>this.props.resolveComplaints(complain.comp_id)}>
                   Resolve</button>:null)}
