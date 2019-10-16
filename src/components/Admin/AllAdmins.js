@@ -41,7 +41,7 @@ class AllAdmins extends Component {
               <div className='post' style={{marginTop: '2%'}}>
                 <img src={admin.profile_pic} alt="admin.name" style={{borderRadius: '68%',  
                                                           width: '28%', 
-                                                          border: '2px solid lightpink'}}/>
+                                                          border: '2px solid blue'}}/>
                 
                 <h4>
                     Name:{admin.name}
