@@ -34,9 +34,9 @@ class NewComplaint extends Component {
         <div>
         <h2 className="center-align">Complain Form</h2>
               <div>
-                <div className="container white-text">
+                <div className="container black-text">
               
-                    <form className="white-text" onSubmit={this.handleSubmit}>
+                    <form className="black-text" onSubmit={this.handleSubmit}>
                     <div className="input-field ">
                   <input 
                     id="title" 
@@ -44,8 +44,8 @@ class NewComplaint extends Component {
                     value={this.state.department} 
                     onChange={this.handleChange}
                     type="text" 
-                    className="feedback-input white-text" />
-                  <label className="white-text" htmlFor="name" className="black-text">Title</label>                  
+                    className="feedback-input black-text" />
+                  <label className="black-text" htmlFor="name" className="black-text">Title</label>                  
                  </div>                        
                         <div className="row">
                           <div className="input-field ">
@@ -55,9 +55,9 @@ class NewComplaint extends Component {
                             name="description"
                             value={this.state.description}
                             onChange={this.handleChange}
-                            className="white-text materialize-textarea validate[required,length[10,1000]] feedback-input" 
+                            className="black-text materialize-textarea validate[required,length[10,1000]] feedback-input" 
                             data-length="120"></textarea>
-                            <label className="white-text" htmlFor="textarea2" className="black-text">Describe your complaint</label>
+                            <label className="black-text" htmlFor="textarea2" className="black-text">Describe your complaint</label>
                           </div>
                         </div>
                   <div className="input-field center">               
