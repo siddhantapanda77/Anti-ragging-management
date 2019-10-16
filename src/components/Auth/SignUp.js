@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
 
 import {signup} from '../../store/actions/authActions'
 
@@ -45,7 +46,7 @@ class SignUp extends Component{
                   { authError ? <p>{authError}</p> : null }
                 </div> */}
               </div>
-              <p>Sign Up as <a className="green-text" href="/signup-admin">admin or volunteer</a> instead.</p>
+              <p>Sign Up as <Link className="green-text" to="/signup-admin">admin or volunteer</Link> instead.</p>
             </form>
             </div>
             </div>
