@@ -22,7 +22,7 @@ class AllAdmins extends Component {
                 
                 {
                   
-                    admins.map(admin => <div className="container col s2  m3 l4" key={admin.clg_id} >
+                    admins.map(admin => <div className="container col s12  m3 l4" key={admin.clg_id} >
                       <div className= "card">
                       <div className="card-content">
                       <img src={admin.profile_pic} alt="volunteer name" style={{borderRadius: '68%',  
