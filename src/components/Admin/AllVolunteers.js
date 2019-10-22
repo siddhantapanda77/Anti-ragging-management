@@ -54,9 +54,9 @@ class AllVolunteers extends Component {
                                                           width: '28%', 
                                                           border: '2px solid blue'}}/>
                 
-                <h4>
+                <h5>
                     Name:{volunteer.name}
-                </h4>
+                </h5>
                 
                 <p>ID: {volunteer.clg_id}</p>
                 <p>Email: {volunteer.email}</p>
