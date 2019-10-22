@@ -61,9 +61,9 @@ class AllComplaints extends Component{
                                                           width: '28%', 
                                                           border: '2px solid lightpink'}}/>
                 
-                <h4 className='right'>
+                <h5>
                     Name:{victim.name}
-                </h4>
+                </h5>
                 <p> Complaint: {complain.description}</p>
                 <p>Degree: {victim.degree}</p>
                 <p>Branch: {victim.branch}</p>
