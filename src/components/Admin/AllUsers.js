@@ -43,9 +43,9 @@ class AllUsers extends Component {
                                                           width: '28%', 
                                                           border: '2px solid blue'}}/>
                 
-                <h4 className='right'>
+                <h5>
                     Name:{user.name}
-                </h4>
+                </h5>
                 <p>Degree: {user.degree}</p>
                 <p>Branch: {user.branch}</p>
                 <p>ID: {user.clg_id}</p>
