@@ -35,51 +35,104 @@ class AllComplaints extends Component{
             const { victim } = complaint;
             // console.log(complain)
             // console.log( victim);
-            return (
-              <div key={complain.comp_id}>
-              <div className=" card  blue-grey lighten-5" >
-                  <div className="card-content">
-                      <p className={'right '+((complain.status==='pending') ? "red-text":"green-text")}>STATUS : {complain.status}</p>
-                      <h3 className="card-title blue-text">{complain.title}</h3>
-                    {/* <Link to={'/complaints/' + post.id}>{((post.status==='Unsolved')?<button className="left btn blue" onClick={this.handleClick}> */}
-                            {/* Resolve complaint */}
-                    {/* </button>:null)}</Link> */}
-                    <p className="truncate">{complain.description}</p>
-                    <p style={{fontWeight: 'bolder'}} >Submitted by: {victim.name}(ID: {victim.clg_id})</p>
-                    <p className="indigo-text" >DATE : {moment.utc(complain.timestamp).format("MMMM Do YYYY, h:mm:ss a")}</p>
-                    {((complain.status==='pending')?<button className="right btn red" onClick={()=>this.props.resolveComplaints(complain.comp_id)}>
-                  Resolve</button>:null)}
-                    <div style={{marginBottom:"5%"}}></div>
-                    <div>
-              <Modal header="Details" key={complain.comp_id} trigger={<button className="left btn blue" style={{marginTop:"-5%"}}>
-                Details
-              </button>          
-          }>
-              <div>
-              <div className='post' style={{marginTop: '2%'}}>
-                <img src={victim.profile_pic} alt="victim.name" style={{borderRadius: '68%',  
-                                                          width: '28%', 
-                                                          border: '2px solid lightpink'}}/>
-                
-                <h5>
-                    Name:{victim.name}
-                </h5>
-                <p> Complaint: {complain.description}</p>
-                <p>Degree: {victim.degree}</p>
-                <p>Branch: {victim.branch}</p>
-                <p>ID: {victim.clg_id}</p>
-                <p>Semester: {victim.semester}</p>
-                <p>Email: {victim.email}</p>
-                <p>Phone: {victim.phone}</p>
-                </div>
-              </div>
-              </Modal>
-              </div>
+            console.log(complain.description.length)
+            if(this.props.auth.user.designation === 'volunteer' && (complain.description.length<40)){
+              return (
+                <div key={complain.comp_id}>
+                <div className=" card  blue-grey lighten-5" >
+                    <div className="card-content">
+                        <p className={'right '+((complain.status==='pending') ? "red-text":"green-text")}>STATUS : {complain.status}</p>
+                        <h3 className="card-title blue-text">{complain.title}</h3>
+                      {/* <Link to={'/complaints/' + post.id}>{((post.status==='Unsolved')?<button className="left btn blue" onClick={this.handleClick}> */}
+                              {/* Resolve complaint */}
+                      {/* </button>:null)}</Link> */}
+                      <p className="truncate">{complain.description}</p>
+                      <p style={{fontWeight: 'bolder'}} >Submitted by: {victim.name}(ID: {victim.clg_id})</p>
+                      <p className="indigo-text" >DATE : {moment.utc(complain.timestamp).format("MMMM Do YYYY, h:mm:ss a")}</p>
+                      {((complain.status==='pending')?<button className="right btn red" onClick={()=>this.props.resolveComplaints(complain.comp_id)}>
+                    Resolve</button>:null)}
+                      <div style={{marginBottom:"5%"}}></div>
+                      <div>
+                <Modal header="Details" key={complain.comp_id} trigger={<button className="left btn blue" style={{marginTop:"-5%"}}>
+                  Details
+                </button>          
+            }>
+                <div>
+                <div className='post' style={{marginTop: '2%'}}>
+                  <img src={victim.profile_pic} alt="victim.name" style={{borderRadius: '68%',  
+                                                            width: '28%', 
+                                                            border: '2px solid lightpink'}}/>
+                  
+                  <h4 className='right'>
+                      Name:{victim.name}
+                  </h4>
+                  <p> Complaint: {complain.description}</p>
+                  <p>Degree: {victim.degree}</p>
+                  <p>Branch: {victim.branch}</p>
+                  <p>ID: {victim.clg_id}</p>
+                  <p>Semester: {victim.semester}</p>
+                  <p>Email: {victim.email}</p>
+                  <p>Phone: {victim.phone}</p>
                   </div>
-            </div>
-            
+                </div>
+                </Modal>
+                </div>
+                    </div>
               </div>
-            )
+              
+                </div>
+              )              
+            }
+            else if(this.props.auth.user.designation === 'admin' && (complain.description.length>40)){
+              return (
+                <div key={complain.comp_id}>
+                <div className=" card  blue-grey lighten-5" >
+                    <div className="card-content">
+                        <p className={'right '+((complain.status==='pending') ? "red-text":"green-text")}>STATUS : {complain.status}</p>
+                        <h3 className="card-title blue-text">{complain.title}</h3>
+                      {/* <Link to={'/complaints/' + post.id}>{((post.status==='Unsolved')?<button className="left btn blue" onClick={this.handleClick}> */}
+                              {/* Resolve complaint */}
+                      {/* </button>:null)}</Link> */}
+                      <p className="truncate">{complain.description}</p>
+                      <p style={{fontWeight: 'bolder'}} >Submitted by: {victim.name}(ID: {victim.clg_id})</p>
+                      <p className="indigo-text" >DATE : {moment.utc(complain.timestamp).format("MMMM Do YYYY, h:mm:ss a")}</p>
+                      {((complain.status==='pending')?<button className="right btn red" onClick={()=>this.props.resolveComplaints(complain.comp_id)}>
+                    Resolve</button>:null)}
+                      <div style={{marginBottom:"5%"}}></div>
+                      <div>
+                <Modal header="Details" key={complain.comp_id} trigger={<button className="left btn blue" style={{marginTop:"-5%"}}>
+                  Details
+                </button>          
+            }>
+                <div>
+                <div className='post' style={{marginTop: '2%'}}>
+                  <img src={victim.profile_pic} alt="victim.name" style={{borderRadius: '68%',  
+                                                            width: '28%', 
+                                                            border: '2px solid lightpink'}}/>
+                  
+                  <h4 className='right'>
+                      Name:{victim.name}
+                  </h4>
+                  <p> Complaint: {complain.description}</p>
+                  <p>Degree: {victim.degree}</p>
+                  <p>Branch: {victim.branch}</p>
+                  <p>ID: {victim.clg_id}</p>
+                  <p>Semester: {victim.semester}</p>
+                  <p>Email: {victim.email}</p>
+                  <p>Phone: {victim.phone}</p>
+                  </div>
+                </div>
+                </Modal>
+                </div>
+                    </div>
+              </div>
+              
+                </div>
+              )
+            }
+            else {
+              return null;
+            }
           })
         ) : (
           <div className="center">No complaints to show</div>
